@@ -1,0 +1,39 @@
+.tm-create-issue-wrapper{
+    .ci-each-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        font-size: 13px;
+        padding-bottom: 15px;
+        &>span{
+          margin-bottom: 5px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+    }
+.create-issue-input-box,.create-issue-description-input-box{
+   width:95%;
+   height: 35px;
+   outline: none;
+   background-color: #FAFBFC;
+   border: 1px solid #0000cd;
+   border-radius: 5px;
+}
+.create-issue-description-input-box{
+    height: 100px;
+}
+.create-issue-button{
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #0000cd;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    min-width: 50px;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+}
+}
+

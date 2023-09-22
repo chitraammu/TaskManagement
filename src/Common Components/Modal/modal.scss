@@ -1,0 +1,58 @@
+.tm-modal-overlay{
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.4);
+    .tm-modal-container{
+        box-shadow: 0 24px 48px rgba(0,0,0,0.26);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        min-height: 140px;
+        max-height: 90%;
+        border-radius: 8px;
+        overflow-y: auto;
+        img{
+            padding-bottom: 7px;
+        }
+        header{
+            display: flex;
+            padding: 12px 12px 0 24px;
+            gap:12px;
+            margin-bottom: 10px;
+            &>h5{
+                font-size: 24px;
+                margin: 0;
+                margin-top: 10px;
+            }
+        }
+        .top-close{
+            display: flex;
+            margin-left:auto;
+            color:#ccc;
+            margin-top: 10px;
+            img{
+                cursor: pointer;
+            }
+        }
+        .children-body{
+            padding: 5px 24px;
+            overflow: auto;
+            line-height: 1.5;
+        }
+        footer{
+            display: flex;
+            justify-content: flex-end;
+            gap:16px;
+            padding: 36px 24px 24px;
+            margin-top: auto;
+        }
+    }
+}

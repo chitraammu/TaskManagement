@@ -1,0 +1,69 @@
+.backlog-parent-wrapper{
+    padding-left: 20px;
+    width: calc(100% - 20px);
+    .create-issue-button{
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #0000cd;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+        min-width: 50px;
+        outline: none;
+        cursor: pointer;
+        border: 0;
+    }
+    &>.backlog-header{
+        height: 150px;
+        text-align: left;
+    }
+    &>.backlog-body{
+        display: flex;
+        align-content: center;
+        background-color: transparent;
+        max-width: 500px;
+        // height: calc(100vh - 150px);
+        flex-direction: column;
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 2px solid #EBECF0;
+        &>.tm-ticket-each-box:hover{
+            background-color: #EBECF0;
+        }
+        &>.tm-ticket-each-box{
+            background-color: white;
+            padding: 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #EBECF0;
+            display: flex;
+            justify-content: space-between;
+            color: #42526E;
+            font-size: 12px;
+            font-weight: 600;
+            align-items: center;
+            .tm-ticket-number{
+                margin-right: 10px;
+            }
+            &>span{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 18px;
+                   height: 24px;
+                   margin-right: 12px;
+                }
+            }
+            .tm-ticket-tag{
+                min-width: 125px;
+                color: #0000cd;
+                background-color:#DEEBFF ;
+                border: 1px solid #0000cd;
+                font-weight: 700;
+                border-radius: 3px;
+
+            }
+        }
+        
+    }
+}
