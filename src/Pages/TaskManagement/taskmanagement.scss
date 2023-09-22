@@ -6,12 +6,28 @@
     &>.top-header-bar{
         height: 75px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         width: calc(100% - 20px);
         padding: 10px;
         box-shadow: 0 4px 26px 0 rgba(75,80,246,.05);
         border-bottom: 1px solid #ccc;
+       
+        .tm-logo-wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 2px;        
+            .tm-logo{
+                color: #0000cd;
+                font-size: 30px;
+                font-weight: 700;
+                margin: 0;
+                &img{
+                    margin-right: 8px;
+                }
+            }
+        }
         .logout{
             font-size: 16px;
             color: #42526E;

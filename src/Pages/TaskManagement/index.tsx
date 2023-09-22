@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, useNavigate } from "react-router";
 import './taskmanagement.scss';
 import LogoutIcon from '../../assets/logout.png';
+import LogoIcon from '../../assets/logo.png';
 
 function TaskManagement(){
     const navigate=useNavigate();
@@ -9,6 +10,11 @@ function TaskManagement(){
   return(
     <div className="taskmanagement-outer-wrapper">
       <div className="top-header-bar">
+        <span className="tm-logo-wrapper">       
+           <img src={LogoIcon} alt='logout' width='30' height='30'/>
+           <p className="tm-logo">TASK</p>
+        </span>
+        <span>
          <span className='logout' onClick={()=>{
           localStorage.removeItem('userEmail');
           navigate('/login');
@@ -17,6 +23,7 @@ function TaskManagement(){
             Logout
             </span>
          <span className="top-mail">{mail}</span>
+         </span>
       </div>
       <div className="tm-login-bottom-bar">
        <div className="tm-left-side-pannel">
