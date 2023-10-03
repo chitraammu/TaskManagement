@@ -10,25 +10,38 @@ function Register(){
     const [userpassword , setuserPassword]=useState('');
     const [confirmpassword , setconfirmPassword]=useState('');
     const [isError , setError]=useState(false);
+    const [errorMessage,setErrorMessage]=useState('');
     const { userData } = useSelector((state:RootState) => state.auth);
     const navigate=useNavigate();
     const dispatch=useAppDispatch();;
     
     const handleRegister=()=>{    
-      
-            if(userpassword === confirmpassword){
-                setError(false);
-                dispatch(setuserData({
-                  emailId:useremail,
-                  password:userpassword
-                }))
-                alert('Registered successfully')
-                navigate('/login');
+    
+      if(validateEmail(useremail) === false || userpassword !== confirmpassword){
+            if(validateEmail(useremail) === false){
+              setError(true);
+              setErrorMessage('Please provide a valid email address')
             }
+            if(userpassword !== confirmpassword){
+                setError(true);
+                setErrorMessage("Both Password didn't match")
+            }
+          }
            else{
-            setError(true)
+            setError(false);
+            dispatch(setuserData({
+              emailId:useremail,
+              password:userpassword
+            }))
+            alert('Registered successfully')
+            navigate('/login');
            }
     }
+
+    const validateEmail=(email:string)=> {
+    var regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    return regex.test(email);
+}
 return(
     <div className="tm-register-wrapper">
         <div className="tm-register-center-wrapper">
@@ -55,7 +68,7 @@ return(
             />
             {
                 isError && 
-                <div className="error-text">Both Password didn't match</div>
+                <div className="error-text">{errorMessage}</div>
             }
             <button 
             className="register-button"

@@ -31,12 +31,7 @@ function TaskManagement(){
               <p>PLANNING</p>
               <span className='selected' onClick={()=>navigate('/taskmanagement/planning/backlog')}>Backlog</span>
            </div>
-           <div className="left-panel-side-connent">
-            <p>DEVELOPMENT</p>
-           </div>
-           <div className="left-panel-side-connent">
-            <p>DEPLOYMENT</p>
-           </div>
+          
        </div>
        <div className="tm-right-side-pannel">
        <Outlet />

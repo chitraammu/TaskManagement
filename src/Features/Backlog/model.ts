@@ -16,4 +16,5 @@ interface backlogData {
     label:string,
     epic:string,
     version:string,
+    isChecked:boolean
    }
